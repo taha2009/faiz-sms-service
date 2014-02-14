@@ -23,7 +23,10 @@ if($_POST)
 		echo $result."<br>";
 	}
 }
- 
+else if($_GET['truncate'])
+{
+	mysql_query("truncate table `contact`");
+} 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml"> 
@@ -70,7 +73,7 @@ th
 ?>
 <table border="1">
 	<tr>
-	<td colspan="5"><?php echo $count;?> Records</td>
+	<td colspan="5"><?php echo $count;?> Records - <a href="?truncate=true">Truncate</a></td>
 	</tr>
 	<tr> 
 	<th>Thali No</th>

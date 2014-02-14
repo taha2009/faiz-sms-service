@@ -1,5 +1,5 @@
 <?php
-$connect = mysql_connect("localhost","root",""); 
+$connect = mysql_connect("pigeon.csano8qro1gz.ap-southeast-1.rds.amazonaws.com","pigeon","pigeon123"); 
 mysql_select_db("faiz",$connect); //select the table
 $query = "SELECT * FROM  `contact` WHERE  `amount` > 0 AND `active` = 1 AND number <> ''";
 

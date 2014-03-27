@@ -58,14 +58,17 @@ th
 <body> 
 
 <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
 <textarea name="message" style="height:150px; width:400px" class="countable2" id="message"></textarea>
 <select id="holder">
 	<option value="<THALINO>">Thali Number</option>
 	<option value="<NAME>">Name</option>
 	<option value="<AMOUNT>">Amount</option>
 </select>
-<input type="button" name="add" value="add" onClick='document.getElementById("message").value += document.getElementById("holder").value;'>
+<input type="button" name="add" value="Add" onClick='document.getElementById("message").value += document.getElementById("holder").value;'>
  <input type="submit" name="msg" value="Send Message" onclick="return confirm('Are you sure?')">
+ <input type="button" name="msg" value="Import" onclick="window.location='import.php'">
+
 </form> 
 <?php
 	$res = mysql_query($query);

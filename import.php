@@ -7,28 +7,35 @@ mysql_select_db("faiz",$connect); //select the table
 
 if ($_FILES[csv][size] > 0) { 
 
-    //get the csv file 
-    $file = $_FILES[csv][tmp_name]; 
-    $handle = fopen($file,"r"); 
-     
-    //loop through the csv file and insert into database 
-    do { 
-        if ($data[0]) { 
-            mysql_query("INSERT INTO contact VALUES 
-                ( 
-                    '".addslashes($data[0])."',
+	//get the csv file 
+	$file = $_FILES[csv][tmp_name]; 
+	$handle = fopen($file,"r"); 
+	 
+	//loop through the csv file and insert into database 
+	$i = 0;
+	do { 
+
+		if($i == 0){
+			$i++;
+			continue;
+		}
+		
+		if ($data[0]) { 
+			mysql_query("INSERT INTO contact VALUES 
+				( 
+					'".addslashes($data[0])."',
 					'".addslashes($data[1])."',
 					'".addslashes($data[2])."',
 					'".addslashes($data[3])."',
-					'".addslashes($data[4])."'
-                ) 
-            "); 
-        } 
-    } while ($data = fgetcsv($handle,1000,",","'")); 
-    // 
+					'1'
+				) 
+			"); 
+		} 
+	} while ($data = fgetcsv($handle,1000,",","'")); 
+	// 
 
-    //redirect 
-    header('Location: import.php?success=1'); die; 
+	//redirect 
+	header('Location: import.php?success=1'); die; 
 
 } 
 
@@ -49,6 +56,7 @@ if ($_FILES[csv][size] > 0) {
   Choose your file: <br /> 
   <input name="csv" type="file" id="csv" /> 
   <input type="submit" name="Submit" value="Submit" /> 
+  <a href="sms_sample.csv">Download Sample</a>
 </form> 
 
 </body> 

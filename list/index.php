@@ -169,7 +169,7 @@
 
 function selectall(action){
 
-	$(':checkbox').each(function() {
+	$(':checkbox:visible').each(function() {
             this.checked = action;                        
         });
 	selectsingle();

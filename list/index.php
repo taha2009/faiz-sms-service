@@ -220,7 +220,7 @@ if (($handle = fopen($spreadsheet_url, "r")) !== FALSE) {
 								$data[4] = 0;
 							}
 									
-								$spreadsheet_data[] = array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[12],$data[22]);}
+								$spreadsheet_data[] = array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[16],$data[26]);}
 				$i++;
 		}
 	fclose($handle);

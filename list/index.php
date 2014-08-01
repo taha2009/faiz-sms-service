@@ -204,7 +204,7 @@ function selectsingle(){
 
 <?php
 // $spreadsheet_url="https://docs.google.com/spreadsheet/pub?key=0ArdhkPTPxvG2dG1mb2ZRbjVod1h2UDdvUzZKLWlyM3c&single=true&gid=31&output=csv";
-$spreadsheet_url="https://docs.google.com/spreadsheet/pub?key=0ArdhkPTPxvG2dG1mb2ZRbjVod1h2UDdvUzZKLWlyM3c&single=true&gid=36&output=csv";
+$spreadsheet_url="https://docs.google.com/spreadsheet/pub?key=0ArdhkPTPxvG2dG1mb2ZRbjVod1h2UDdvUzZKLWlyM3c&single=true&gid=39&output=csv";
 
 
 if(!ini_set('default_socket_timeout',15)) echo "<!-- unable to change socket timeout -->";

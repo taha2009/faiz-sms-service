@@ -203,7 +203,6 @@ function selectsingle(){
  <a id="checkcount">0</a> Message(s) selected
 
 <?php
-// $spreadsheet_url="https://docs.google.com/spreadsheet/pub?key=0ArdhkPTPxvG2dG1mb2ZRbjVod1h2UDdvUzZKLWlyM3c&single=true&gid=31&output=csv";
 $spreadsheet_url="https://docs.google.com/spreadsheet/pub?key=0ArdhkPTPxvG2dG1mb2ZRbjVod1h2UDdvUzZKLWlyM3c&single=true&gid=39&output=csv";
 
 
@@ -220,7 +219,7 @@ if (($handle = fopen($spreadsheet_url, "r")) !== FALSE) {
 								$data[4] = 0;
 							}
 									
-								$spreadsheet_data[] = array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[16],$data[26]);}
+								$spreadsheet_data[] = array($data[0],$data[1],$data[2],$data[3],$data[4],$data[5],$data[14],$data[24],$data[6]);}
 				$i++;
 		}
 	fclose($handle);
@@ -242,6 +241,7 @@ else
 			<th class="filter-select">Transporter</th>
 			<th>Total Pending</th>
 			<th>Full Address</th>
+			<th>Start Transport</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -249,7 +249,7 @@ else
 		<?php
 		foreach ($spreadsheet_data as $value) {
 			?>
-			<tr><td><input type="checkbox" name="data[]" value='<?php echo json_encode(array($value[0],$value[1],$value[6],$value[2]));?>' onclick="selectsingle()" class="value"></td><td><?php echo $value[0];?></td><td><?php echo $value[1];?></td><td><?php echo $value[2];?></td><td><?php echo $value[3];?></td><td><?php echo $value[4];?></td><td><?php echo $value[5];?></td><td><?php echo $value[6];?></td><td><?php echo $value[7];?></td></tr>
+			<tr><td><input type="checkbox" name="data[]" value='<?php echo json_encode(array($value[0],$value[1],$value[6],$value[2]));?>' onclick="selectsingle()" class="value"></td><td><?php echo $value[0];?></td><td><?php echo $value[1];?></td><td><?php echo $value[2];?></td><td><?php echo $value[3];?></td><td><?php echo $value[4];?></td><td><?php echo $value[5];?></td><td><?php echo $value[6];?></td><td><?php echo $value[7];?></td><td><?php echo $value[8];?></td></tr>
 			<?php
 		}
 		?>

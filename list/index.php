@@ -14,7 +14,9 @@
 			$name = $name[0];
 			$message1 = str_replace(array("%THALINO%","%NAME%","%AMOUNT%"),array($value1[0],$name,$value1[2]),$message1);
 			$message1 = urlencode($message1);
-			$result = file_get_contents("http://sms.myn2p.com/sendhttp.php?user=mustafamnr&password=mnr80211&mobiles=$value1[3]&message=$message1&sender=FAIZST&route=Template");
+			//$result = file_get_contents("http://sms.myn2p.com/sendhttp.php?user=mustafamnr&password=mnr80211&mobiles=$value1[3]&message=$message1&sender=FAIZST&route=Template");
+			$result = file_get_contents("http://sms.almasaarr.com/sendsms.php?username=mustafamnr&password=mnr80211&sender=FAIZST&mobile=$value1[3]&message=$message1&type=1");
+			
 			// echo $result."<br>";
 			// echo "http://sms.myn2p.com/sendhttp.php?user=mustafamnr&password=mnr80211&mobiles=$value1[3]&message=$message1&sender=FAIZST&route=Template"."<br>";
 

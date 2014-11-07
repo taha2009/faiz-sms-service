@@ -19,7 +19,8 @@ if($_POST)
 		//echo $message."<br>";
 		$message = urlencode($message);
 		//echo "http://sms.myn2p.com/sendhttp.php?user=mustafamnr&password=mnr80211&mobiles=$number&message=$message&sender=FAIZST&route=Template";
-		$result = file_get_contents("http://sms.myn2p.com/sendhttp.php?user=mustafamnr&password=mnr80211&mobiles=$number&message=$message&sender=FAIZST&route=Template");
+		// $result = file_get_contents("http://sms.myn2p.com/sendhttp.php?user=mustafamnr&password=mnr80211&mobiles=$number&message=$message&sender=FAIZST&route=Template");
+		$result = file_get_contents("http://sms.almasaarr.com/sendsms.php?username=mustafamnr&password=mnr80211&sender=FAIZST&mobile=$number&message=$message&type=1");
 		echo $result."<br>";
 	}
 }

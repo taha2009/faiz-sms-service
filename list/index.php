@@ -205,7 +205,7 @@ function selectsingle(){
  <a id="checkcount">0</a> Message(s) selected
 
 <?php
-$spreadsheet_url="https://docs.google.com/spreadsheet/pub?key=0ArdhkPTPxvG2dG1mb2ZRbjVod1h2UDdvUzZKLWlyM3c&output=csv";
+$spreadsheet_url="https://docs.google.com/spreadsheets/d/1M_tPiZsAlsp9d_TwfE0k1C0ZlA0LiI7YYoFe1VJM7Bg/export?gid=0&format=csv";
 
 if(!ini_set('default_socket_timeout',15)) echo "<!-- unable to change socket timeout -->";
 
